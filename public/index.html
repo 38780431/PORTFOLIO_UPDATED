@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio website with login and authentication">
+  <meta name="theme-color" content="#667eea">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="JRN Portfolio">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/jpeg" href="/images/image-of-japheth-ralph.jpg">
+  <link rel="apple-touch-icon" href="/images/image-of-japheth-ralph.jpg">
+  <title>Login & Registration</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-yH0fKcV++d8jDmbfWDG7zv4C1yw6RqxKx6r8EFH1YfJSUQhnhwV8g49yqcQYfK+eQe1P0j6u3HZeu2em76yYdg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+  <script defer src="js/pwa-helper.js"></script>
+  <style>
+    #offlineIndicator {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #ff6b6b;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      z-index: 9999;
+      font-weight: 500;
+    }
+
+    #installBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 9998;
+      font-weight: 500;
+    }
+
+    #installBtn:hover {
+      background: #5568d3;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    #installBtn[hidden] {
+      display: none;
+    }
+
+    #updatePrompt {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      max-width: 400px;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 9997;
+    }
+
+    #updatePrompt h3 {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+
+    #updatePrompt p {
+      margin: 0 0 15px 0;
+      color: #666;
+      font-size: 14px;
+    }
+
+    #updatePrompt button {
+      padding: 8px 16px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    #updateBtn {
+      background: #667eea;
+      color: white;
+    }
+
+    #updateBtn:hover {
+      background: #5568d3;
+    }
+
+    #dismissUpdateBtn {
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    #dismissUpdateBtn:hover {
+      background: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div id="offlineIndicator">
+    <i class="fas fa-wifi-slash"></i> You are offline - Some features may be limited
+  </div>
+
+  <div id="updatePrompt">
+    <h3>Update Available</h3>
+    <p>A new version of the app is available. Refresh to update.</p>
+    <button id="updateBtn">Update Now</button>
+    <button id="dismissUpdateBtn">Dismiss</button>
+  </div>
+
+  <button id="installBtn" hidden>
+    <i class="fas fa-download"></i> Install App
+  </button>
+
+  <div class="container" id="container">
+    <div class="form-container sign-up">
+      <form action="/register" method="POST">
+        <h1>Create Account</h1>
+        <div class="alert error" id="registerError" hidden></div>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="fname" placeholder="First Name" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="lname" placeholder="Last Name" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" placeholder="Password (min 8 characters)" minlength="8" required>
+          <small style="color: #aaa; font-size: 0.85rem;">Password must be at least 8 characters</small>
+        </div>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+
+    <div class="form-container sign-in">
+      <form action="/login" method="POST">
+        <h1>Sign In</h1>
+        <div class="alert error" id="loginError" hidden></div>
+        <div class="alert success" id="registeredSuccess" hidden>Registration successful! Please login.</div>
+        <div class="alert success" id="loggedOutSuccess" hidden>You have logged out successfully.</div>
+        <div class="alert success" id="passwordResetSuccess" hidden>Password reset successful! Please login with your new password.</div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <a href="#" class="forgot-password" id="forgotPasswordLink">Forgot Your Password?</a>
+        <button type="submit" class="btn">Sign In</button>
+      </form>
+    </div>
+
+    <div class="form-container forgot-password-form" id="forgotPasswordForm" hidden>
+      <form action="/forgot-password" method="POST">
+        <h1>Reset Password</h1>
+        <div class="alert error" id="forgotError" hidden></div>
+        <div class="alert success" id="forgotSuccess" hidden>If an account exists for that email, a password reset link has been sent.</div>
+        <p style="text-align: center; color: #aaa; margin-bottom: 20px;">Enter your email and we will send a one-time reset link.</p>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <button type="submit" class="btn">Send Reset Link</button>
+        <button type="button" class="btn" id="backToLoginBtn" style="background: #666; margin-top: 10px;">Back to Login</button>
+      </form>
+    </div>
+
+    <div class="form-container forgot-password-form" id="resetPasswordForm" hidden>
+      <form action="/reset-password" method="POST">
+        <h1>Choose a New Password</h1>
+        <div class="alert error" id="resetError" hidden></div>
+        <input type="hidden" name="token" id="resetToken">
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="newPassword" placeholder="New Password (min 8 characters)" minlength="8" required>
+          <small style="color: #aaa; font-size: 0.85rem;">Password must be at least 8 characters</small>
+        </div>
+        <button type="submit" class="btn">Update Password</button>
+        <button type="button" class="btn" id="resetBackToLoginBtn" style="background: #666; margin-top: 10px;">Back to Login</button>
+      </form>
+    </div>
+
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-left">
+          <h1>Welcome Back!</h1>
+          <p>Enter your personal details to use all site features</p>
+          <button id="login" class="ghost">Sign In</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+          <h1>Hello, Friend!</h1>
+          <p>Register with your personal details to use all site features</p>
+          <button id="register" class="ghost">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

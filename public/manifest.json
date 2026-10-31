@@ -1,0 +1,19 @@
+{
+  "name": "JRN Portfolio",
+  "short_name": "JRN",
+  "description": "Professional portfolio website with login and authentication",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "icons": [
+    {
+      "src": "/images/image-of-japheth-ralph.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

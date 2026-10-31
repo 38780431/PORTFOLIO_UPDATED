@@ -1,0 +1,7 @@
+node_modules/
+data/app.db
+cookie.txt
+BrowserUpdateCheck/
+.env
+.env.*
+!.env.example

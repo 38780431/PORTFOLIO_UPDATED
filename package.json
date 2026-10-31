@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-login-node-sqlite",
+  "version": "1.0.0",
+  "description": "Portfolio website with login and registration using Node.js and SQLite.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "nodemailer": "^10.3.1",
+    "sql.js": "^1.8.0"
+  },
+  "overrides": {
+    "qs": "^6.17.1"
+  }
+}
