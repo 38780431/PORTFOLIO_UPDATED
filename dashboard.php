@@ -932,7 +932,7 @@ header {
                                 </div>
                                 <div class="project-links">
                                     <a href="#" class="btn">Live Demo</a>
-                                    <a href="#" class="btn btn-outline">View Code</a>
+                                    <a href="https://github.com/38780431/PORTFOLIO_UPDATED" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Code</a>
                                     <a href="#" class="btn btn-outline">Case Study</a>
                                 </div>
                             </div>
@@ -964,7 +964,7 @@ header {
                                 </div>
                                 <div class="project-links">
                                     <a href="#" class="btn">Live Demo</a>
-                                    <a href="#" class="btn btn-outline">View Code</a>
+                                    <a href="https://github.com/38780431/PORTFOLIO_UPDATED" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Code</a>
                                 </div>
                             </div>
                         </div>
@@ -997,7 +997,7 @@ header {
                                 </div>
                                 <div class="project-links">
                                     <a href="#" class="btn">Live Demo</a>
-                                    <a href="#" class="btn btn-outline">View Code</a>
+                                    <a href="https://github.com/38780431/PORTFOLIO_UPDATED" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Code</a>
                                     <a href="#" class="btn btn-outline">Case Study</a>
                                 </div>
                             </div>
@@ -1030,7 +1030,7 @@ header {
                                 </div>
                                 <div class="project-links">
                                     <a href="#" class="btn">Live Demo</a>
-                                    <a href="#" class="btn btn-outline">View Code</a>
+                                    <a href="https://github.com/38780431/PORTFOLIO_UPDATED" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Code</a>
                                     <a href="#" class="btn btn-outline">Case Study</a>
                                 </div>
                             </div>
@@ -1074,7 +1074,7 @@ header {
                                 </div>
                                 <div class="project-links">
                                     <a href="#" class="btn">Platform Demo</a>
-                                    <a href="#" class="btn btn-outline">GitHub Repo</a>
+                                    <a href="https://github.com/38780431/PORTFOLIO_UPDATED" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
                                     <a href="#" class="btn btn-outline">Technical White Paper</a>
                                 </div>
                             </div>
