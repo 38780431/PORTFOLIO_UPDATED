@@ -938,10 +938,10 @@ header {
                             </div>
                         </div>
                         
-                        <!-- Project 2: Developer Portfolio -->
+                        <!-- Project 2: My Project Portfolio -->
                         <div class="project-card">
                             <div class="project-content">
-                                <h3>Developer Portfolio</h3>
+                                <h3>My Project Portfolio</h3>
                                 <p class="project-description">
                                     Responsive portfolio template with dark/light mode toggle.
                                 </p>
@@ -960,6 +960,26 @@ header {
                             </div>
                         </div>
                         
+                        <!-- Rental House Management System -->
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3>Rental House Management System</h3>
+                                <p class="project-description">
+                                    A system for organizing rental properties, tenant information, and rent records to support day-to-day property management.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Student Alert System -->
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3>Student Alert System</h3>
+                                <p class="project-description">
+                                    A system for sending timely alerts about important student updates to help keep students and their contacts informed.
+                                </p>
+                            </div>
+                        </div>
+
                         <!-- Project 3: E-Learning Platform -->
                         <div class="project-card">
                             <div class="project-content">
