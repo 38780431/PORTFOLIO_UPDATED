@@ -786,12 +786,10 @@ header {
                         <h1 class="name">JAPHETH RALPH NYADWERA</h1>
                         <h2 class="title">Front-end Developer</h2>
                         <p class="bio">
-                            Enthusiastic and detailed-oriented software and web Developer currently
-                            pursuing a degree in Information and Communication Technology at
-                            Maseno University. Skilled in front-end and back-end Technologies
-                            such as HTML, CSS, JavaScript, Java, Python, PHP, and MYSQL. Experienced in
-                            building responsive websites and dynamic web applications with a
-                            focus on clean code and user-friendly design.
+                            I am an ICT graduate from Maseno University and a detail-oriented software and web developer.
+                            My development toolkit includes HTML, CSS, JavaScript, TypeScript, Java, Python, PHP,
+                            C, C++, C#, and SQL, along with React and MySQL. I build responsive websites and
+                            dynamic web applications with a focus on clean code and user-friendly design.
                         </p>
                         <div class="action-buttons">
                             <a href="JAPHETH RALPH. CV.pdf" download="JAPHETH RALPH. CV.pdf" class="cv-button">
@@ -824,12 +822,10 @@ header {
                     <div class="container">
                         <h2>About Me</h2>
                         <div class="about-content">
-                            <p>Enthusiastic and detailed-oriented software and web Developer currently
-                            pursuing a degree in Information and Communication Technology at
-                            Maseno University. Skilled in front-end and back-end Technologies
-                            such as HTML, CSS, JavaScript, Java, Python, PHP, and MYSQL. Experienced in
-                            building responsive websites and dynamic web applications with a
-                            focus on clean code and user-friendly design.</p>
+                            <p>I am an ICT graduate from Maseno University and a detail-oriented software and web developer.
+                            My development toolkit includes HTML, CSS, JavaScript, TypeScript, Java, Python, PHP,
+                            C, C++, C#, and SQL, along with React and MySQL. I build responsive websites and
+                            dynamic web applications with a focus on clean code and user-friendly design.</p>
                         </div>
                     </div>
                 </div>
@@ -840,8 +836,12 @@ header {
                         <h2>Technical Expertise</h2>
                         <div class="skills-list">
                             <div class="skill-item">
+                                <h3>Programming Languages</h3>
+                                <p>HTML, CSS, JavaScript, TypeScript, Java, Python, PHP, C, C++, C#, SQL</p>
+                            </div>
+                            <div class="skill-item">
                                 <h3>Frontend Development</h3>
-                                <p>(React, JavaScript)</p>
+                                <p>React and responsive web development</p>
                             </div>
                             <div class="skill-item">
                                 <h3>Cisco Networking & Security</h3>
@@ -869,7 +869,7 @@ header {
                         <ul class="education-list">
                             <li>
                                 <strong>Bachelor of Science in ICT</strong>
-                                <p>Maseno University - Kisumu (2022–Ongoing)</p>
+                                <p>Maseno University - Kisumu (2022–2026)</p>
                             </li>
                             <li>
                                 <strong>Certificate in Network Security (Cisco)</strong>
