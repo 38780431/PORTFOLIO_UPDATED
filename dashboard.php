@@ -813,6 +813,7 @@ header {
                     <a href="https://youtube.com/@japhethralph?si=a212tD4l-zY_Uwuu" target="_blank" class="social-icon"><i class="bx bxl-youtube"></i></a>
                     <a href="https://www.instagram.com/ralph.japheth?igsh=YzljYTk1ODg3Zg==" target="_blank" class="social-icon"><i class="bx bxl-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/japheth-ralph-nyadwera-23406a2b5" target="_blank" class="social-icon"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/38780431" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub profile"><i class="bx bxl-github" aria-hidden="true"></i></a>
                     <a href="https://www.facebook.com/japheth.ralp.3" target="_blank" class="social-icon"><i class="bx bxl-facebook-circle"></i></a>
                 </div>
             </section>
